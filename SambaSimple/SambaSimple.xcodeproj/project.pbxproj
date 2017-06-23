@@ -1,0 +1,790 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6D147C92843803E725DFB0B0 /* libPods-SambaSimple.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DFA2E156781BF5D673AECC7 /* libPods-SambaSimple.a */; };
+		86AF78CF1EFA6EEC00851BCA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AF78CE1EFA6EEC00851BCA /* main.m */; };
+		86AF78D21EFA6EEC00851BCA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AF78D11EFA6EEC00851BCA /* AppDelegate.m */; };
+		86AF78D81EFA6EEC00851BCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86AF78D61EFA6EEC00851BCA /* Main.storyboard */; };
+		86AF78DA1EFA6EEC00851BCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86AF78D91EFA6EEC00851BCA /* Assets.xcassets */; };
+		86AF78DD1EFA6EEC00851BCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86AF78DB1EFA6EEC00851BCA /* LaunchScreen.storyboard */; };
+		86AF78E81EFA6EEC00851BCA /* SambaSimpleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AF78E71EFA6EEC00851BCA /* SambaSimpleTests.m */; };
+		86AF78F31EFA6EEC00851BCA /* SambaSimpleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AF78F21EFA6EEC00851BCA /* SambaSimpleUITests.m */; };
+		86AF79261EFA70BC00851BCA /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 86AF79251EFA70BC00851BCA /* libiconv.tbd */; };
+		86AF79281EFA712100851BCA /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 86AF79271EFA712100851BCA /* libz.tbd */; };
+		86AF79401EFA759B00851BCA /* SMBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AF793E1EFA759B00851BCA /* SMBViewController.m */; };
+		86AF79491EFA866600851BCA /* FileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AF79481EFA866600851BCA /* FileViewController.m */; };
+		86AF79CD1EFBB5BA00851BCA /* EasySambaFileHTTPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AF79BC1EFBB5BA00851BCA /* EasySambaFileHTTPResponse.m */; };
+		86AF79CE1EFBB5BA00851BCA /* EasySambaHTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AF79BE1EFBB5BA00851BCA /* EasySambaHTTPConnection.m */; };
+		86AF79CF1EFBB5BA00851BCA /* EasySambaHTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AF79C01EFBB5BA00851BCA /* EasySambaHTTPServer.m */; };
+		86AF79D01EFBB5BA00851BCA /* KxSMBProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AF79C31EFBB5BA00851BCA /* KxSMBProvider.m */; };
+		86AF79D11EFBB5BA00851BCA /* libsmbclient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86AF79C51EFBB5BA00851BCA /* libsmbclient.a */; };
+		86AF79D21EFBB5BA00851BCA /* libtalloc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86AF79C71EFBB5BA00851BCA /* libtalloc.a */; };
+		86AF79D31EFBB5BA00851BCA /* libtdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86AF79C81EFBB5BA00851BCA /* libtdb.a */; };
+		86AF79D41EFBB5BA00851BCA /* libtevent.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86AF79C91EFBB5BA00851BCA /* libtevent.a */; };
+		86AF79D51EFBB5BA00851BCA /* libwbclient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86AF79CA1EFBB5BA00851BCA /* libwbclient.a */; };
+		86AF79E11EFBB5C700851BCA /* SambaDownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AF79D81EFBB5C700851BCA /* SambaDownloadTask.m */; };
+		86AF79E21EFBB5C700851BCA /* SambaDownloadTask_ErrorRetry_UnlessNotFound.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AF79DA1EFBB5C700851BCA /* SambaDownloadTask_ErrorRetry_UnlessNotFound.m */; };
+		86AF79E31EFBB5C700851BCA /* SambaFetchTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AF79DC1EFBB5C700851BCA /* SambaFetchTask.m */; };
+		86AF79E51EFBB5C700851BCA /* SambaTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AF79E01EFBB5C700851BCA /* SambaTask.m */; };
+		86AF79EE1EFBBB9400851BCA /* SimpleSambaDownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AF79ED1EFBBB9400851BCA /* SimpleSambaDownloadTask.m */; };
+		86AF79F11EFBC61E00851BCA /* SambaDownloadHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AF79F01EFBC61E00851BCA /* SambaDownloadHandle.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		86AF78E41EFA6EEC00851BCA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86AF78C21EFA6EEC00851BCA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86AF78C91EFA6EEC00851BCA;
+			remoteInfo = SambaSimple;
+		};
+		86AF78EF1EFA6EEC00851BCA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86AF78C21EFA6EEC00851BCA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86AF78C91EFA6EEC00851BCA;
+			remoteInfo = SambaSimple;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		63561A5F2289FD1093F4FF68 /* Pods-SambaSimple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SambaSimple.release.xcconfig"; path = "Pods/Target Support Files/Pods-SambaSimple/Pods-SambaSimple.release.xcconfig"; sourceTree = "<group>"; };
+		6DFA2E156781BF5D673AECC7 /* libPods-SambaSimple.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SambaSimple.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8487D4B1A1F5E186629344EC /* Pods-SambaSimple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SambaSimple.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SambaSimple/Pods-SambaSimple.debug.xcconfig"; sourceTree = "<group>"; };
+		86AF78CA1EFA6EEC00851BCA /* SambaSimple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SambaSimple.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		86AF78CE1EFA6EEC00851BCA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		86AF78D01EFA6EEC00851BCA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		86AF78D11EFA6EEC00851BCA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		86AF78D71EFA6EEC00851BCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		86AF78D91EFA6EEC00851BCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		86AF78DC1EFA6EEC00851BCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		86AF78DE1EFA6EEC00851BCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86AF78E31EFA6EEC00851BCA /* SambaSimpleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SambaSimpleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		86AF78E71EFA6EEC00851BCA /* SambaSimpleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SambaSimpleTests.m; sourceTree = "<group>"; };
+		86AF78E91EFA6EEC00851BCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86AF78EE1EFA6EEC00851BCA /* SambaSimpleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SambaSimpleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		86AF78F21EFA6EEC00851BCA /* SambaSimpleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SambaSimpleUITests.m; sourceTree = "<group>"; };
+		86AF78F41EFA6EEC00851BCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86AF79251EFA70BC00851BCA /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		86AF79271EFA712100851BCA /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		86AF79291EFA714100851BCA /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		86AF792B1EFA715D00851BCA /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		86AF792D1EFA716A00851BCA /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		86AF792F1EFA718500851BCA /* libz.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.tbd; path = usr/lib/libz.1.tbd; sourceTree = SDKROOT; };
+		86AF793D1EFA759B00851BCA /* SMBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMBViewController.h; sourceTree = "<group>"; };
+		86AF793E1EFA759B00851BCA /* SMBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMBViewController.m; sourceTree = "<group>"; };
+		86AF79471EFA866600851BCA /* FileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileViewController.h; sourceTree = "<group>"; };
+		86AF79481EFA866600851BCA /* FileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileViewController.m; sourceTree = "<group>"; };
+		86AF79BB1EFBB5BA00851BCA /* EasySambaFileHTTPResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasySambaFileHTTPResponse.h; sourceTree = "<group>"; };
+		86AF79BC1EFBB5BA00851BCA /* EasySambaFileHTTPResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasySambaFileHTTPResponse.m; sourceTree = "<group>"; };
+		86AF79BD1EFBB5BA00851BCA /* EasySambaHTTPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasySambaHTTPConnection.h; sourceTree = "<group>"; };
+		86AF79BE1EFBB5BA00851BCA /* EasySambaHTTPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasySambaHTTPConnection.m; sourceTree = "<group>"; };
+		86AF79BF1EFBB5BA00851BCA /* EasySambaHTTPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasySambaHTTPServer.h; sourceTree = "<group>"; };
+		86AF79C01EFBB5BA00851BCA /* EasySambaHTTPServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasySambaHTTPServer.m; sourceTree = "<group>"; };
+		86AF79C21EFBB5BA00851BCA /* KxSMBProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxSMBProvider.h; sourceTree = "<group>"; };
+		86AF79C31EFBB5BA00851BCA /* KxSMBProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxSMBProvider.m; sourceTree = "<group>"; };
+		86AF79C51EFBB5BA00851BCA /* libsmbclient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libsmbclient.a; sourceTree = "<group>"; };
+		86AF79C61EFBB5BA00851BCA /* libsmbclient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libsmbclient.h; sourceTree = "<group>"; };
+		86AF79C71EFBB5BA00851BCA /* libtalloc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtalloc.a; sourceTree = "<group>"; };
+		86AF79C81EFBB5BA00851BCA /* libtdb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtdb.a; sourceTree = "<group>"; };
+		86AF79C91EFBB5BA00851BCA /* libtevent.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtevent.a; sourceTree = "<group>"; };
+		86AF79CA1EFBB5BA00851BCA /* libwbclient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libwbclient.a; sourceTree = "<group>"; };
+		86AF79CB1EFBB5BA00851BCA /* talloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = talloc.h; sourceTree = "<group>"; };
+		86AF79CC1EFBB5BA00851BCA /* talloc_stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = talloc_stack.h; sourceTree = "<group>"; };
+		86AF79D71EFBB5C700851BCA /* SambaDownloadTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SambaDownloadTask.h; sourceTree = "<group>"; };
+		86AF79D81EFBB5C700851BCA /* SambaDownloadTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SambaDownloadTask.m; sourceTree = "<group>"; };
+		86AF79D91EFBB5C700851BCA /* SambaDownloadTask_ErrorRetry_UnlessNotFound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SambaDownloadTask_ErrorRetry_UnlessNotFound.h; sourceTree = "<group>"; };
+		86AF79DA1EFBB5C700851BCA /* SambaDownloadTask_ErrorRetry_UnlessNotFound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SambaDownloadTask_ErrorRetry_UnlessNotFound.m; sourceTree = "<group>"; };
+		86AF79DB1EFBB5C700851BCA /* SambaFetchTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SambaFetchTask.h; sourceTree = "<group>"; };
+		86AF79DC1EFBB5C700851BCA /* SambaFetchTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SambaFetchTask.m; sourceTree = "<group>"; };
+		86AF79DF1EFBB5C700851BCA /* SambaTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SambaTask.h; sourceTree = "<group>"; };
+		86AF79E01EFBB5C700851BCA /* SambaTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SambaTask.m; sourceTree = "<group>"; };
+		86AF79EC1EFBBB9400851BCA /* SimpleSambaDownloadTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleSambaDownloadTask.h; sourceTree = "<group>"; };
+		86AF79ED1EFBBB9400851BCA /* SimpleSambaDownloadTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleSambaDownloadTask.m; sourceTree = "<group>"; };
+		86AF79EF1EFBC61E00851BCA /* SambaDownloadHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SambaDownloadHandle.h; sourceTree = "<group>"; };
+		86AF79F01EFBC61E00851BCA /* SambaDownloadHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SambaDownloadHandle.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		86AF78C71EFA6EEC00851BCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86AF79D41EFBB5BA00851BCA /* libtevent.a in Frameworks */,
+				86AF79D31EFBB5BA00851BCA /* libtdb.a in Frameworks */,
+				86AF79281EFA712100851BCA /* libz.tbd in Frameworks */,
+				86AF79D51EFBB5BA00851BCA /* libwbclient.a in Frameworks */,
+				86AF79D21EFBB5BA00851BCA /* libtalloc.a in Frameworks */,
+				86AF79D11EFBB5BA00851BCA /* libsmbclient.a in Frameworks */,
+				86AF79261EFA70BC00851BCA /* libiconv.tbd in Frameworks */,
+				6D147C92843803E725DFB0B0 /* libPods-SambaSimple.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86AF78E01EFA6EEC00851BCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86AF78EB1EFA6EEC00851BCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7A189763AE7DA372CD66E7D3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8487D4B1A1F5E186629344EC /* Pods-SambaSimple.debug.xcconfig */,
+				63561A5F2289FD1093F4FF68 /* Pods-SambaSimple.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		86AF78C11EFA6EEC00851BCA = {
+			isa = PBXGroup;
+			children = (
+				86AF78CC1EFA6EEC00851BCA /* SambaSimple */,
+				86AF78E61EFA6EEC00851BCA /* SambaSimpleTests */,
+				86AF78F11EFA6EEC00851BCA /* SambaSimpleUITests */,
+				86AF78CB1EFA6EEC00851BCA /* Products */,
+				86AF79241EFA70BC00851BCA /* Frameworks */,
+				7A189763AE7DA372CD66E7D3 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		86AF78CB1EFA6EEC00851BCA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				86AF78CA1EFA6EEC00851BCA /* SambaSimple.app */,
+				86AF78E31EFA6EEC00851BCA /* SambaSimpleTests.xctest */,
+				86AF78EE1EFA6EEC00851BCA /* SambaSimpleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		86AF78CC1EFA6EEC00851BCA /* SambaSimple */ = {
+			isa = PBXGroup;
+			children = (
+				86AF79D61EFBB5C700851BCA /* SambaTask */,
+				86AF79B91EFBB5BA00851BCA /* EasySamba */,
+				86AF78D01EFA6EEC00851BCA /* AppDelegate.h */,
+				86AF78D11EFA6EEC00851BCA /* AppDelegate.m */,
+				86AF78D61EFA6EEC00851BCA /* Main.storyboard */,
+				86AF793D1EFA759B00851BCA /* SMBViewController.h */,
+				86AF793E1EFA759B00851BCA /* SMBViewController.m */,
+				86AF79471EFA866600851BCA /* FileViewController.h */,
+				86AF79481EFA866600851BCA /* FileViewController.m */,
+				86AF79EF1EFBC61E00851BCA /* SambaDownloadHandle.h */,
+				86AF79F01EFBC61E00851BCA /* SambaDownloadHandle.m */,
+				86AF78D91EFA6EEC00851BCA /* Assets.xcassets */,
+				86AF78DB1EFA6EEC00851BCA /* LaunchScreen.storyboard */,
+				86AF78DE1EFA6EEC00851BCA /* Info.plist */,
+				86AF78CD1EFA6EEC00851BCA /* Supporting Files */,
+			);
+			path = SambaSimple;
+			sourceTree = "<group>";
+		};
+		86AF78CD1EFA6EEC00851BCA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				86AF78CE1EFA6EEC00851BCA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		86AF78E61EFA6EEC00851BCA /* SambaSimpleTests */ = {
+			isa = PBXGroup;
+			children = (
+				86AF78E71EFA6EEC00851BCA /* SambaSimpleTests.m */,
+				86AF78E91EFA6EEC00851BCA /* Info.plist */,
+			);
+			path = SambaSimpleTests;
+			sourceTree = "<group>";
+		};
+		86AF78F11EFA6EEC00851BCA /* SambaSimpleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				86AF78F21EFA6EEC00851BCA /* SambaSimpleUITests.m */,
+				86AF78F41EFA6EEC00851BCA /* Info.plist */,
+			);
+			path = SambaSimpleUITests;
+			sourceTree = "<group>";
+		};
+		86AF79241EFA70BC00851BCA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				86AF792F1EFA718500851BCA /* libz.1.tbd */,
+				86AF792D1EFA716A00851BCA /* libstdc++.6.0.9.tbd */,
+				86AF792B1EFA715D00851BCA /* libc++.tbd */,
+				86AF79291EFA714100851BCA /* libbz2.tbd */,
+				86AF79271EFA712100851BCA /* libz.tbd */,
+				86AF79251EFA70BC00851BCA /* libiconv.tbd */,
+				6DFA2E156781BF5D673AECC7 /* libPods-SambaSimple.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		86AF79B91EFBB5BA00851BCA /* EasySamba */ = {
+			isa = PBXGroup;
+			children = (
+				86AF79BA1EFBB5BA00851BCA /* HttpServer */,
+				86AF79C11EFBB5BA00851BCA /* KxSMB */,
+			);
+			name = EasySamba;
+			path = ../../EasySamba;
+			sourceTree = "<group>";
+		};
+		86AF79BA1EFBB5BA00851BCA /* HttpServer */ = {
+			isa = PBXGroup;
+			children = (
+				86AF79BB1EFBB5BA00851BCA /* EasySambaFileHTTPResponse.h */,
+				86AF79BC1EFBB5BA00851BCA /* EasySambaFileHTTPResponse.m */,
+				86AF79BD1EFBB5BA00851BCA /* EasySambaHTTPConnection.h */,
+				86AF79BE1EFBB5BA00851BCA /* EasySambaHTTPConnection.m */,
+				86AF79BF1EFBB5BA00851BCA /* EasySambaHTTPServer.h */,
+				86AF79C01EFBB5BA00851BCA /* EasySambaHTTPServer.m */,
+			);
+			path = HttpServer;
+			sourceTree = "<group>";
+		};
+		86AF79C11EFBB5BA00851BCA /* KxSMB */ = {
+			isa = PBXGroup;
+			children = (
+				86AF79C21EFBB5BA00851BCA /* KxSMBProvider.h */,
+				86AF79C31EFBB5BA00851BCA /* KxSMBProvider.m */,
+				86AF79C41EFBB5BA00851BCA /* libs */,
+			);
+			path = KxSMB;
+			sourceTree = "<group>";
+		};
+		86AF79C41EFBB5BA00851BCA /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				86AF79C51EFBB5BA00851BCA /* libsmbclient.a */,
+				86AF79C61EFBB5BA00851BCA /* libsmbclient.h */,
+				86AF79C71EFBB5BA00851BCA /* libtalloc.a */,
+				86AF79C81EFBB5BA00851BCA /* libtdb.a */,
+				86AF79C91EFBB5BA00851BCA /* libtevent.a */,
+				86AF79CA1EFBB5BA00851BCA /* libwbclient.a */,
+				86AF79CB1EFBB5BA00851BCA /* talloc.h */,
+				86AF79CC1EFBB5BA00851BCA /* talloc_stack.h */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		86AF79D61EFBB5C700851BCA /* SambaTask */ = {
+			isa = PBXGroup;
+			children = (
+				86AF79DF1EFBB5C700851BCA /* SambaTask.h */,
+				86AF79E01EFBB5C700851BCA /* SambaTask.m */,
+				86AF79DB1EFBB5C700851BCA /* SambaFetchTask.h */,
+				86AF79DC1EFBB5C700851BCA /* SambaFetchTask.m */,
+				86AF79D71EFBB5C700851BCA /* SambaDownloadTask.h */,
+				86AF79D81EFBB5C700851BCA /* SambaDownloadTask.m */,
+				86AF79D91EFBB5C700851BCA /* SambaDownloadTask_ErrorRetry_UnlessNotFound.h */,
+				86AF79DA1EFBB5C700851BCA /* SambaDownloadTask_ErrorRetry_UnlessNotFound.m */,
+				86AF79EC1EFBBB9400851BCA /* SimpleSambaDownloadTask.h */,
+				86AF79ED1EFBBB9400851BCA /* SimpleSambaDownloadTask.m */,
+			);
+			path = SambaTask;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		86AF78C91EFA6EEC00851BCA /* SambaSimple */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86AF78F71EFA6EEC00851BCA /* Build configuration list for PBXNativeTarget "SambaSimple" */;
+			buildPhases = (
+				04DA61139A1986D63662A4A9 /* [CP] Check Pods Manifest.lock */,
+				86AF78C61EFA6EEC00851BCA /* Sources */,
+				86AF78C71EFA6EEC00851BCA /* Frameworks */,
+				86AF78C81EFA6EEC00851BCA /* Resources */,
+				3BC0AF25EF4D09C8CB5F750A /* [CP] Embed Pods Frameworks */,
+				0B8E0A5886765A122E826C36 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SambaSimple;
+			productName = SambaSimple;
+			productReference = 86AF78CA1EFA6EEC00851BCA /* SambaSimple.app */;
+			productType = "com.apple.product-type.application";
+		};
+		86AF78E21EFA6EEC00851BCA /* SambaSimpleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86AF78FA1EFA6EEC00851BCA /* Build configuration list for PBXNativeTarget "SambaSimpleTests" */;
+			buildPhases = (
+				86AF78DF1EFA6EEC00851BCA /* Sources */,
+				86AF78E01EFA6EEC00851BCA /* Frameworks */,
+				86AF78E11EFA6EEC00851BCA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				86AF78E51EFA6EEC00851BCA /* PBXTargetDependency */,
+			);
+			name = SambaSimpleTests;
+			productName = SambaSimpleTests;
+			productReference = 86AF78E31EFA6EEC00851BCA /* SambaSimpleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		86AF78ED1EFA6EEC00851BCA /* SambaSimpleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86AF78FD1EFA6EEC00851BCA /* Build configuration list for PBXNativeTarget "SambaSimpleUITests" */;
+			buildPhases = (
+				86AF78EA1EFA6EEC00851BCA /* Sources */,
+				86AF78EB1EFA6EEC00851BCA /* Frameworks */,
+				86AF78EC1EFA6EEC00851BCA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				86AF78F01EFA6EEC00851BCA /* PBXTargetDependency */,
+			);
+			name = SambaSimpleUITests;
+			productName = SambaSimpleUITests;
+			productReference = 86AF78EE1EFA6EEC00851BCA /* SambaSimpleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		86AF78C21EFA6EEC00851BCA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = flamegrace;
+				TargetAttributes = {
+					86AF78C91EFA6EEC00851BCA = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = PK25G5QCH4;
+						ProvisioningStyle = Automatic;
+					};
+					86AF78E21EFA6EEC00851BCA = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = PK25G5QCH4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 86AF78C91EFA6EEC00851BCA;
+					};
+					86AF78ED1EFA6EEC00851BCA = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = PK25G5QCH4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 86AF78C91EFA6EEC00851BCA;
+					};
+				};
+			};
+			buildConfigurationList = 86AF78C51EFA6EEC00851BCA /* Build configuration list for PBXProject "SambaSimple" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 86AF78C11EFA6EEC00851BCA;
+			productRefGroup = 86AF78CB1EFA6EEC00851BCA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				86AF78C91EFA6EEC00851BCA /* SambaSimple */,
+				86AF78E21EFA6EEC00851BCA /* SambaSimpleTests */,
+				86AF78ED1EFA6EEC00851BCA /* SambaSimpleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		86AF78C81EFA6EEC00851BCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86AF78DD1EFA6EEC00851BCA /* LaunchScreen.storyboard in Resources */,
+				86AF78DA1EFA6EEC00851BCA /* Assets.xcassets in Resources */,
+				86AF78D81EFA6EEC00851BCA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86AF78E11EFA6EEC00851BCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86AF78EC1EFA6EEC00851BCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04DA61139A1986D63662A4A9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		0B8E0A5886765A122E826C36 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SambaSimple/Pods-SambaSimple-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3BC0AF25EF4D09C8CB5F750A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SambaSimple/Pods-SambaSimple-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		86AF78C61EFA6EEC00851BCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86AF79CE1EFBB5BA00851BCA /* EasySambaHTTPConnection.m in Sources */,
+				86AF78D21EFA6EEC00851BCA /* AppDelegate.m in Sources */,
+				86AF79E21EFBB5C700851BCA /* SambaDownloadTask_ErrorRetry_UnlessNotFound.m in Sources */,
+				86AF79E51EFBB5C700851BCA /* SambaTask.m in Sources */,
+				86AF79D01EFBB5BA00851BCA /* KxSMBProvider.m in Sources */,
+				86AF79401EFA759B00851BCA /* SMBViewController.m in Sources */,
+				86AF79E31EFBB5C700851BCA /* SambaFetchTask.m in Sources */,
+				86AF79E11EFBB5C700851BCA /* SambaDownloadTask.m in Sources */,
+				86AF79491EFA866600851BCA /* FileViewController.m in Sources */,
+				86AF79F11EFBC61E00851BCA /* SambaDownloadHandle.m in Sources */,
+				86AF78CF1EFA6EEC00851BCA /* main.m in Sources */,
+				86AF79CF1EFBB5BA00851BCA /* EasySambaHTTPServer.m in Sources */,
+				86AF79EE1EFBBB9400851BCA /* SimpleSambaDownloadTask.m in Sources */,
+				86AF79CD1EFBB5BA00851BCA /* EasySambaFileHTTPResponse.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86AF78DF1EFA6EEC00851BCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86AF78E81EFA6EEC00851BCA /* SambaSimpleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86AF78EA1EFA6EEC00851BCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86AF78F31EFA6EEC00851BCA /* SambaSimpleUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		86AF78E51EFA6EEC00851BCA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 86AF78C91EFA6EEC00851BCA /* SambaSimple */;
+			targetProxy = 86AF78E41EFA6EEC00851BCA /* PBXContainerItemProxy */;
+		};
+		86AF78F01EFA6EEC00851BCA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 86AF78C91EFA6EEC00851BCA /* SambaSimple */;
+			targetProxy = 86AF78EF1EFA6EEC00851BCA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		86AF78D61EFA6EEC00851BCA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				86AF78D71EFA6EEC00851BCA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		86AF78DB1EFA6EEC00851BCA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				86AF78DC1EFA6EEC00851BCA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		86AF78F51EFA6EEC00851BCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		86AF78F61EFA6EEC00851BCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		86AF78F81EFA6EEC00851BCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8487D4B1A1F5E186629344EC /* Pods-SambaSimple.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PK25G5QCH4;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Pods/CocoaHTTPServer";
+				INFOPLIST_FILE = SambaSimple/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../EasySamba/KxSMB/libs",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-lresolv",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flamegrace.samba.SambaSimple;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		86AF78F91EFA6EEC00851BCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63561A5F2289FD1093F4FF68 /* Pods-SambaSimple.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PK25G5QCH4;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Pods/CocoaHTTPServer";
+				INFOPLIST_FILE = SambaSimple/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../EasySamba/KxSMB/libs",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-lresolv",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.flamegrace.samba.SambaSimple;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		86AF78FB1EFA6EEC00851BCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = PK25G5QCH4;
+				INFOPLIST_FILE = SambaSimpleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.flamegrace.samba.SambaSimpleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SambaSimple.app/SambaSimple";
+			};
+			name = Debug;
+		};
+		86AF78FC1EFA6EEC00851BCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = PK25G5QCH4;
+				INFOPLIST_FILE = SambaSimpleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.flamegrace.samba.SambaSimpleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SambaSimple.app/SambaSimple";
+			};
+			name = Release;
+		};
+		86AF78FE1EFA6EEC00851BCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = PK25G5QCH4;
+				INFOPLIST_FILE = SambaSimpleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.flamegrace.samba.SambaSimpleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SambaSimple;
+			};
+			name = Debug;
+		};
+		86AF78FF1EFA6EEC00851BCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = PK25G5QCH4;
+				INFOPLIST_FILE = SambaSimpleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.flamegrace.samba.SambaSimpleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SambaSimple;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		86AF78C51EFA6EEC00851BCA /* Build configuration list for PBXProject "SambaSimple" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86AF78F51EFA6EEC00851BCA /* Debug */,
+				86AF78F61EFA6EEC00851BCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86AF78F71EFA6EEC00851BCA /* Build configuration list for PBXNativeTarget "SambaSimple" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86AF78F81EFA6EEC00851BCA /* Debug */,
+				86AF78F91EFA6EEC00851BCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86AF78FA1EFA6EEC00851BCA /* Build configuration list for PBXNativeTarget "SambaSimpleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86AF78FB1EFA6EEC00851BCA /* Debug */,
+				86AF78FC1EFA6EEC00851BCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86AF78FD1EFA6EEC00851BCA /* Build configuration list for PBXNativeTarget "SambaSimpleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86AF78FE1EFA6EEC00851BCA /* Debug */,
+				86AF78FF1EFA6EEC00851BCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 86AF78C21EFA6EEC00851BCA /* Project object */;
+}

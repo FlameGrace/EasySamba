@@ -48,4 +48,12 @@
  */
 - (NSString *)httpUrlForSambaFile:(NSString *)filePath;
 
+/**
+ 返回http路径转换后的samba路径，对于视频，可以直接播放
+ 
+ @param url http路径
+ @return http url
+ */
++ (NSString *)sambaFilePathForHttpUrl:(NSString *)url;
+
 @end

@@ -84,17 +84,25 @@ static EasySambaHTTPServer *server = nil;
 
 - (NSString *)httpUrlForSambaFile:(NSString *)filePath
 {
-    KxSMBItemFile *file = [[KxSMBProvider sharedSmbProvider] fetchAtPath:filePath];
-    if(!file || ![file isKindOfClass:[KxSMBItemFile class]])
-    {
-        return nil;
-    }
     NSString *smbPath = [filePath copy];
     NSString *videoSmbPath = [smbPath substringFromIndex:6];
     NSString *httpUrl = [NSString stringWithFormat:@"http://127.0.0.1:%hu/smb/%@",self.listeningPort,videoSmbPath];
     //将url转换为utf8字符
     httpUrl = [httpUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     return httpUrl;
+}
+
++ (NSString *)sambaFilePathForHttpUrl:(NSString *)url
+{
+    NSRange position = [url rangeOfString:@"/smb/"];
+    if(position.location != NSNotFound)
+    {
+        
+        NSString *videoPath = [url substringFromIndex:position.location + position.length];
+        videoPath = [@"smb://" stringByAppendingString:videoPath];
+        return videoPath;
+    }
+    return nil;
 }
 
 @end

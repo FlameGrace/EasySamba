@@ -316,7 +316,7 @@ static KxSMBProvider *gSmbProvider;
 + (SMBCCTX *) openSmbContext:(KxSMBAuth *)auth
 {
     //NSParameterAssert(auth);
-    
+    NSTimeInterval start = [[NSDate date] timeIntervalSince1970];
     SMBCCTX *smbContext = smbc_new_context();
     if (!smbContext) {
 		return NULL;
@@ -361,7 +361,7 @@ static KxSMBProvider *gSmbProvider;
         
         // fixes warning: no talloc stackframe at libsmb/cliconnect.c:2637, leaking memory
         TALLOC_CTX *frame = talloc_stackframe();
-        smbc_getFunctionPurgeCachedServers(smbContext)(smbContext);
+//        smbc_getFunctionPurgeCachedServers(smbContext)(smbContext);
         TALLOC_FREE(frame);
         
         smbc_free_context(smbContext, NO);
@@ -371,7 +371,7 @@ static KxSMBProvider *gSmbProvider;
 + (id) fetchTreeAtPath:(NSString *)path
                   auth:(KxSMBAuth *)auth
 {
-    NSParameterAssert(path);    
+    NSParameterAssert(path);
     
     SMBCCTX *smbContext = [self openSmbContext:auth];
     if (!smbContext) {
@@ -406,15 +406,15 @@ static KxSMBProvider *gSmbProvider;
                 itemPath = [NSString stringWithFormat:@"%@/%@", path, name];
                         
             KxSMBItemStat *stat = nil;
-            
-            if (dirent->smbc_type != SMBC_WORKGROUP &&
-                dirent->smbc_type != SMBC_SERVER) {
-                
-                id r = [self fetchStat:smbContext atPath:itemPath];
-                if ([r isKindOfClass:[KxSMBItemStat class]]) {
-                    stat = r;
-                }
-            }
+//优化查询速度
+//            if (dirent->smbc_type != SMBC_WORKGROUP &&
+//                dirent->smbc_type != SMBC_SERVER) {
+//
+//                id r = [self fetchStat:smbContext atPath:itemPath];
+//                if ([r isKindOfClass:[KxSMBItemStat class]]) {
+//                    stat = r;
+//                }
+//            }
             
             switch(dirent->smbc_type)
             {
@@ -495,7 +495,8 @@ static KxSMBProvider *gSmbProvider;
     stat.lastAccess = [NSDate dateWithTimeIntervalSince1970: st.st_atime];
     stat.creationTime = [NSDate dateWithTimeIntervalSince1970: st.st_ctime];
     stat.size = st.st_size;
-    stat.mode = st.st_mode;    
+    stat.mode = st.st_mode;
+    
     return stat;
     
 }
@@ -537,7 +538,6 @@ static KxSMBProvider *gSmbProvider;
     }
     
     result = [self fetchStat:smbContext atPath:path];
-    
     if ([result isKindOfClass:[KxSMBItemStat class]]) {
         
         KxSMBItemStat *stat = result;

@@ -32,6 +32,7 @@
 */
 
 #import <Foundation/Foundation.h>
+#define  DefaultKXSMBAuth [KxSMBAuth smbAuthWorkgroup:@"WORKGROUP" username:@"" password:@""]
 
 extern NSString * const _Nonnull KxSMBErrorDomain;
 

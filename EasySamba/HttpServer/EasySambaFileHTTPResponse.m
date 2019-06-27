@@ -32,6 +32,8 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN; // | HTTP_LOG_FLAG_TRACE;
 @end;
 
 @implementation EasySambaFileHTTPResponse
+
+
 - (id)initWithSMBFilePath:(NSString *)fpath forConnection:(HTTPConnection *)parent;
 {
     if((self = [super init]))
@@ -49,6 +51,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN; // | HTTP_LOG_FLAG_TRACE;
             return nil;
         }
         self.fileItem = file;
+        
         fileFD = NULL_FD;
         filePath = fpath;
         
